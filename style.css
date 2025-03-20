@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Wrapper */
+#wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Heading */
+h1 {
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Image Container */
+#img-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Image Wrapper */
+#img-container a {
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+#img-container a:hover {
+    transform: scale(1.05);
+}
+
+/* Images - Ensuring Same Size */
+#img-container img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+/* Loader */
+#loader {
+    display: none;
+    text-align: center;
+    margin: 20px;
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    transition: 0.3s;
+}
+
+#scrollToTop:hover {
+    background: #555;
+}
+
+
+/* Loading Spinner */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #ddd;
+    border-top: 5px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Dark Mode Button */
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#darkModeToggle:hover {
+    background-color: #444;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #181818;
+    color: white;
+}
+
+.dark-mode h1 {
+    color: white;
+}
+
+.dark-mode #img-container a {
+    border: 2px solid white;
+}
+
+.dark-mode #darkModeToggle {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode .spinner {
+    border-top: 5px solid #fff;
+}
